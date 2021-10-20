@@ -4,7 +4,7 @@ class Animal
 {
     private String nom;
     private int poids;
-    static private Regime regime;
+    private Regime regime;
 
     public Animal(String nom, int poids, Regime regime)
     {
@@ -21,8 +21,7 @@ class Animal
 
     public String getNom() {return this.nom;}
     public int getPoids() {return this.poids;}
-    static public Regime getRegime() {return Animal.regime;}
-    static public void setRegime(Regime regime) {Animal.regime = regime;}
+    public Regime getRegime() {return this.regime;}
 
     public void crier()
     {System.out.println(this.nom + " crie...");}
@@ -37,7 +36,6 @@ class Animal
 class Canard extends Animal
 {
     private String couleurPlumes;
-    static private Regime regime;
 
     public Canard(String nom, int poids, String couleurPlumes)
     {
