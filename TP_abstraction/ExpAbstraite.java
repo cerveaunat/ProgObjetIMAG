@@ -1,59 +1,10 @@
-class ExpAbstraite 
+public abstract class ExpAbstraite 
 {
-    private String expression;
+    public abstract String toStringInfixe();
 
-    public ExpAbstraite(String expression)
+    @Override
+    public String toString()
     {
-        this.expression = expression;
+        return "Je suis une expression et me voila en notation infixée : " + this.toStringInfixe();
     }
-
-    public String toStringInfixe()
-    {
-        return "(" + this.expression + ")";
-    }
-}
-
-class ExpBinaire extends ExpAbstraite
-{
-    private String expression;
-
-    public ExpBinaire(String expression)
-    {
-        this.expression = expression;
-    }
-}
-
-class ExpUnaire extends ExpAbstraite
-{
-
-}
-
-class Constante
-{
-
-}
-
-class Variable 
-{
-
-}
-
-class UnaireCos extends ExpUnaire
-{
-
-}
-
-class UnaireSin extends ExpUnaire
-{
-
-}
-
-class BinairePlus extends ExpBinaire
-{
-
-}
-
-class BinaireMult extends ExpBinaire
-{
-
 }
