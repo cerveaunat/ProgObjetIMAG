@@ -4,7 +4,6 @@ public class UnaireCos extends ExpUnaire {
         super(operateur);
     }
 
-    @Override
     public String toStringInfixe() {
         return "cos(" + super.operateur + ")"; 
     }
